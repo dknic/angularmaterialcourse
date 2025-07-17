@@ -1,0 +1,37 @@
+<div>
+  <mat-button-toggle #toggleBtn> Toggle
+
+  </mat-button-toggle>
+  {{toggleBtn.checked}}
+</div>
+
+<!-- Group button toggle behave like group of radio button-->
+ <div>
+  <mat-button-toggle-group #singletoggleGroup="matButtonToggleGroup">
+    <mat-button-toggle value="Angular">Angular</mat-button-toggle>
+    <mat-button-toggle value="React">React</mat-button-toggle>
+    <mat-button-toggle value="Vue">Vue</mat-button-toggle>
+  </mat-button-toggle-group>
+  {{ singletoggleGroup.value }}
+</div>
+
+
+<!-- To select multiple value from toggle group -->
+ <!-- <div>
+ <mat-button-toggle-group multiple #multitoggleGroup="matButtonToggleGroup">
+  <mat-button-toggle value="Angular">Angular</mat-button-toggle>
+  <mat-button-toggle value="React">React</mat-button-toggle>
+  <mat-button-toggle value="Vue">Vue</mat-button-toggle>
+</mat-button-toggle-group>
+ {{ multitoggleGroup.value }}
+</div> -->
+
+<!-- to get toggle value in component-->
+ <div>
+  <mat-button-toggle-group multiple (change)="onToggleChange($event)" #multitoggleGroup="matButtonToggleGroup">
+    <mat-button-toggle value="Angular">Angular</mat-button-toggle>
+    <mat-button-toggle value="React">React</mat-button-toggle>
+    <mat-button-toggle value="Vue">Vue</mat-button-toggle>
+  </mat-button-toggle-group>
+  {{ multitoggleGroup.value }}
+</div>

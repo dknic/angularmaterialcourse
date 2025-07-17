@@ -10,9 +10,10 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MaterialModule } from './material/material.module';
 import { TypographyComponent } from './typography/typography.component';
 import { ButtonComponent } from './button/button.component';
+import { ButtonToggleComponent } from './button-toggle/button-toggle.component';
 
 @NgModule({
-  declarations: [AppComponent, TypographyComponent, ButtonComponent],
+  declarations: [AppComponent, TypographyComponent, ButtonComponent, ButtonToggleComponent],
   imports: [BrowserModule, AppRoutingModule, MaterialModule],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],
